@@ -1,32 +1,48 @@
-# Task 1 - Java Basics and OOP Fundamentals
-
-**Goal:** understand Java basics and object-oriented programming.
-
-## Files (`src/task1/`)
-
-| File | Purpose |
-|------|---------|
-| `BasicsDemo.java` | loops, conditions, switch, arrays: multiplication table, primes, FizzBuzz, factorial, grades, sum/average/max/min, reverse, bubble sort, search, transpose |
-| `Shape.java` | abstract base class (abstraction) |
-| `Circle.java`, `Rectangle.java`, `Triangle.java` | subclasses that override `area()` and `perimeter()` |
-| `Square.java` | multilevel inheritance: Square -> Rectangle -> Shape |
-| `Employee.java` | encapsulation: private fields, validated getters and setters |
-| `Manager.java`, `Developer.java` | inheritance and method overriding of `calculateSalary()` |
-| `Calculator.java` | method overloading |
-| `Main.java` | runs every demonstration |
-| `Task1Tests.java` | 33 self-checking tests |
-
-## OOP concepts used
-
-* **Encapsulation:** `Employee` keeps `name` and `baseSalary` private and validates them in the setters.
-* **Inheritance:** `Manager` and `Developer` extend `Employee`; `Square` extends `Rectangle`.
-* **Polymorphism:** a `Shape[]` and an `Employee[]` are processed in one loop, and each object runs its own overridden method (runtime). `Calculator.add` is overloaded (compile time).
-* **Abstraction:** `Shape` declares abstract methods that every concrete shape must provide.
-
-## Run
-
+Author: Jatin Jadaun (Candidate ID BS/REG/128507)
+Internship: Java Developer Intern, Alfido Tech, 10 Aug 2026 - 10 Sep 2026
+This repository contains my solutions to three of the four internship tasks
+(the internship asked for any three). Each task is a separate, self-contained
+Java project with its own source folder, tests and README.
+Task	Folder	What it shows
+1	`task1-java-oop/`	Java basics (loops, conditions, arrays) and OOP: classes, objects, inheritance, polymorphism, encapsulation
+2	`task2-student-management/`	Console Student Management System: Scanner input, menus, conditions, loops
+3	`task3-collections-exceptions/`	ArrayList, HashMap, HashSet, try-catch-finally and custom exceptions
+Requirements
+JDK 8 or newer (tested with JDK 21). Check with `javac -version`.
+No external libraries. Tests are plain Java programs that print PASS or FAIL.
+How to build and run
+Open a terminal inside the task folder. The commands are the same on
+Windows (Command Prompt / PowerShell), Linux and macOS.
 ```
+cd task1-java-oop
 javac -d out src/task1/*.java
 java -cp out task1.Main
 java -cp out task1.Task1Tests
+```
+```
+cd task2-student-management
+javac -d out src/task2/*.java
+java -cp out task2.Main
+java -cp out task2.Task2Tests
+```
+```
+cd task3-collections-exceptions
+javac -d out src/task3/*.java
+java -cp out task3.Main
+java -cp out task3.Task3Tests
+```
+Test results (JDK 21)
+Task	Test class	Result
+1	`Task1Tests`	33 passed, 0 failed
+2	`Task2Tests`	27 passed, 0 failed
+3	`Task3Tests`	25 passed, 0 failed
+All three projects compile with `javac -Xlint:all` without warnings.
+Repository layout
+```
+alfido-java-internship/
+  README.md
+  .gitignore
+  task1-java-oop/src/task1/...
+  task2-student-management/src/task2/...
+  task3-collections-exceptions/src/task3/...
 ```
